@@ -77,7 +77,7 @@ foodButtonEl.addEventListener('click', e => {
 })
 
 // Ive set the base level at 0
-// When I click the feed button a few things are happening 
+// When I click the feed button a few things are happening: 
     // the value of f will go up by 1 which is indicated by the f++
     // Ive also notified the html to update as I click on the button and update it to whatever f is 
 // the console.log is indicating that my function is working for me when i inspect and view it in the console
