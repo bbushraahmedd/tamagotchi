@@ -42,13 +42,6 @@ playButtonEl.addEventListener('click', e => {
 })
 
 
-
-
-
-const foodScoreEl = document.querySelector('#foodScore')
-
-
-
 // Functions
 // I want to update the score in the DOM every time I hit the button corresponding to the variable
 
@@ -61,6 +54,8 @@ changeFoodLevel(56)
 // console.log(foodLevel, "new food level")
 // =========================================================================================
 
+
+// =======================================================================================================
 // Explaining how its all working
 
 // Cached Variables for Buttons
