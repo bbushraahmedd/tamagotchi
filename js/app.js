@@ -1,46 +1,36 @@
 
 
-// Welcome Page
 
-// let enterNameUrl = "entername.html";
-// document.getElementById("play").onclick = 
-// function () {
-//     window.location.replace(enterNameUrl);
-// }
+// Game Page
 
 // Cached Variables for Buttons
 const foodButtonEl = document.querySelector('#food')
 const sleepButtonEl = document.querySelector('#sleep')
 const playButtonEl = document.querySelector('#play')
 
+let foodScoreEl = document.querySelector('#foodScore')
+let sleepScoreEl = document.querySelector('#sleepScore')
+let playScoreEl = document.querySelector('#playScore')
+
+
 // Event Listeners for Buttons
-
+let f = 0;
 foodButtonEl.addEventListener('click', e => {
-    console.log(e, 'buttons working yoo!')
+    f++;
+    foodScoreEl.innerText = f;
+    console.log(f)
 })
 
+let s = 0;
 sleepButtonEl.addEventListener('click', e => {
-    console.log(e, 'buttons working woohoooo!')
+    s++;
+    sleepScoreEl.innerText = s;
+    console.log(s)
 })
 
+let p = 0;
 playButtonEl.addEventListener('click', e => {
-    console.log(e, 'buttons working woohooo!')
+    p++;
+    playScoreEl.innerText = p;
+    console.log(p)
 })
-
-
-
-// Game Page
-// let foodLevel = 100
-// A sleep variable: let sleepLevel = 100
-// A play variable: let playLevel = 100
-
-
-// I want to update the score in the DOM every time I hit the button corresponding to the variable
-
-// function changeFoodLevel(newFoodLevel) {
-//     foodLevel = newFoodLevel
-//     return foodLevel
-// }
-
-// changeFoodLevel(56)
-// console.log(foodLevel, "new food level")
