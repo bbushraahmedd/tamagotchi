@@ -1,6 +1,3 @@
-
-
-
 // Game Page
 
 // Cached Variables for Buttons
@@ -12,25 +9,53 @@ let foodScoreEl = document.querySelector('#foodScore')
 let sleepScoreEl = document.querySelector('#sleepScore')
 let playScoreEl = document.querySelector('#playScore')
 
-
 // Event Listeners for Buttons
-let f = 0;
 foodButtonEl.addEventListener('click', e => {
-    f++;
-    foodScoreEl.innerText = `Food Level: ${f}`;
-    console.log(f)
+    scores.food +=1
+    render();
 })
 
-let s = 0;
 sleepButtonEl.addEventListener('click', e => {
-    s++;
-    sleepScoreEl.innerText = `Sleep Level: ${s}`;
-    console.log(s)
+    scores.sleep +=1
+    render();
 });
 
-let p = 0;
 playButtonEl.addEventListener('click', e => {
-    p++;
-    playScoreEl.innerText = `Play Level: ${p}`;
-    console.log(p)
+    scores.play +=1
+    render();
 });
+
+
+let scores;
+init();
+
+function init() {
+    scores = {
+        food: 100,
+        sleep: 100,
+        play: 100
+    };
+    render();
+};
+
+function render() {
+    foodScoreEl.innerText = `Food Level: ${scores.food}`;
+    sleepScoreEl.innerText = `Sleep Level: ${scores.sleep}`;
+    playScoreEl.innerText = `Play Level: ${scores.play}`;
+}
+
+// Intervals Decreasing
+setInterval(function lowerFoodScore() {
+    scores.food -=1;
+    render();
+}, 2000)
+
+setInterval(function lowerSleepScore() {
+    scores.sleep -=1;
+    render();
+}, 5000)
+
+setInterval(function lowerPlayScore() {
+    scores.play -=1;
+    render();
+}, 3000)
