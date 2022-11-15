@@ -49,7 +49,11 @@ let foodTimer = setInterval(lowerFoodScore, 1000)
 function lowerFoodScore() {
     scores.food -=1;
     render();
-    if(scores.food === 0) {
+    if(scores.food === 50) {
+        alert('Your pet is HUNGRY!');
+    } else if(scores.food === 10) {
+        alert('HURRY AND FEED YOUR PET LIKE NOOOWW!!!!');
+    } else if(scores.food === 0) {
         clearInterval(foodTimer);
     }
 }
@@ -58,16 +62,24 @@ let sleepTimer = setInterval(lowerSleepScore, 5000)
 function lowerSleepScore() {
     scores.sleep -=7;
     render();
-    if(scores.sleep === 0) {
+    if(scores.sleep === 50) {
+        alert('Your pet is TIRED!');
+    } else if(scores.sleep === 10) {
+        alert('HELLLLOOO?? Your pet is EXHAUSTED. Let them SLEEP!');
+    } else if(scores.sleep === 0) {
         clearInterval(sleepTimer);
     }
 }
 
 let playTimer = setInterval(lowerPlayScore, 3000)
-function lowerplayScore() {
+function lowerPlayScore() {
     scores.play -=3;
     render();
-    if(scores.play === 0) {
+    if(scores.play === 50) {
+        alert('Your pet is BORED!');
+    } else if(scores.play === 10) {
+        alert('Hey! Go and play with your pet. They are dying from BOREDOM!!!');
+    } else if(scores.play === 0) {
         clearInterval(playTimer);
     }
 }
