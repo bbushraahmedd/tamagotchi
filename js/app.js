@@ -28,14 +28,6 @@ function render() {
     playScoreEl.innerText = `Play Level: ${scores.play}`;
 }
 
-function startTimers() {
-    foodTimer = setInterval(lowerFoodScore, 1000)
-    sleepTimer = setInterval(lowerSleepScore, 5000)
-    playTimer = setInterval(lowerPlayScore, 3000)
-}
-
-startTimers();
-
 // Event Listeners for Level Buttons
 foodButtonEl.addEventListener('click', e => {
     scores.food +=1
@@ -103,6 +95,14 @@ pauseButtonEl.addEventListener('click', e => {
     clearInterval(playTimer);
     render();
 });
+
+function startTimers() {
+    foodTimer = setInterval(lowerFoodScore, 1000)
+    sleepTimer = setInterval(lowerSleepScore, 5000)
+    playTimer = setInterval(lowerPlayScore, 3000)
+}
+
+startTimers();
 
 resumeButtonEl.addEventListener('click', e => {
     startTimers();
