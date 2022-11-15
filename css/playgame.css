@@ -93,6 +93,9 @@ body {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+.food-level {
+    margin: 0
+}
 span {
     align-items: center;
     display: inline-block;
@@ -104,7 +107,39 @@ span {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-#start {
+#food-score {
+    align-items: center;
+    display: inline-block;
+    width: 45%;
+    font-size: 55px;
+    text-align: right;
+    color: #675A4F;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#sleep-score {
+    align-items: center;
+    display: inline-block;
+    width: 45%;
+    font-size: 55px;
+    text-align: right;
+    margin: 1em 6em 1em 18em;
+    color: #675A4F;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#play-score {
+    align-items: center;
+    display: inline-block;
+    width: 45%;
+    font-size: 55px;
+    text-align: right;
+    margin: 1em 6em 1em 18em;
+    color: #675A4F;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#resume {
     width: 75px;
     padding: 15px 0;
     text-align: center;

@@ -46,7 +46,7 @@ playButtonEl.addEventListener('click', e => {
 
 
 // Intervals Decreasing
-let foodTimer = setInterval(lowerFoodScore, 1000)
+let foodTimer;
 function lowerFoodScore() {
     scores.food -=1;
     render();
@@ -59,7 +59,7 @@ function lowerFoodScore() {
     }
 }
 
-let sleepTimer = setInterval(lowerSleepScore, 5000)
+let sleepTimer; 
 function lowerSleepScore() {
     scores.sleep -=5;
     render();
@@ -72,7 +72,7 @@ function lowerSleepScore() {
     }
 }
 
-let playTimer = setInterval(lowerPlayScore, 3000)
+let playTimer;
 function lowerPlayScore() {
     scores.play -=10;
     render();
@@ -85,8 +85,9 @@ function lowerPlayScore() {
     }
 }
 
-// Pause and Play Button
+// Pause and Restart Button
 const pauseButtonEl = document.querySelector('#pause')
+const resumeButtonEl = document.querySelector('#resume')
 
 pauseButtonEl.addEventListener('click', e => {
     clearInterval(foodTimer);
@@ -94,3 +95,16 @@ pauseButtonEl.addEventListener('click', e => {
     clearInterval(playTimer);
     render();
 });
+
+resumeButtonEl.addEventListener('click', e => {
+    startTimers();
+    render();
+});
+
+function startTimers() {
+    foodTimer = setInterval(lowerFoodScore, 1000)
+    sleepTimer = setInterval(lowerSleepScore, 5000)
+    playTimer = setInterval(lowerPlayScore, 3000)
+}
+
+startTimers();
