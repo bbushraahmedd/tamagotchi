@@ -1,9 +1,9 @@
 # Tamagotchi 
-### SEI 1031 Cohort
-### By Bushra Ahmed
+#### SEI 1031 Cohort
+#### By Bushra Ahmed
 
 ## Description
-Keep 
+Based on the classic 90s Tamagotchi game. Keep your virtual pet alive. 
 
 
 ## Technologies Used
