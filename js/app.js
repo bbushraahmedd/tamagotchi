@@ -1,6 +1,6 @@
 // Game Page
 
-// Cached Variables for Buttons
+// Cached Variables for Level Buttons
 const foodButtonEl = document.querySelector('#food')
 const sleepButtonEl = document.querySelector('#sleep')
 const playButtonEl = document.querySelector('#play')
@@ -9,23 +9,7 @@ let foodScoreEl = document.querySelector('#foodScore')
 let sleepScoreEl = document.querySelector('#sleepScore')
 let playScoreEl = document.querySelector('#playScore')
 
-// Event Listeners for Buttons
-foodButtonEl.addEventListener('click', e => {
-    scores.food +=1
-    render();
-})
-
-sleepButtonEl.addEventListener('click', e => {
-    scores.sleep +=1
-    render();
-});
-
-playButtonEl.addEventListener('click', e => {
-    scores.play +=1
-    render();
-});
-
-
+// Render and Init Functions
 let scores;
 init();
 
@@ -44,6 +28,23 @@ function render() {
     playScoreEl.innerText = `Play Level: ${scores.play}`;
 }
 
+// Event Listeners for Level Buttons
+foodButtonEl.addEventListener('click', e => {
+    scores.food +=1
+    render();
+})
+
+sleepButtonEl.addEventListener('click', e => {
+    scores.sleep +=5
+    render();
+});
+
+playButtonEl.addEventListener('click', e => {
+    scores.play +=10
+    render();
+});
+
+
 // Intervals Decreasing
 let foodTimer = setInterval(lowerFoodScore, 1000)
 function lowerFoodScore() {
@@ -60,7 +61,7 @@ function lowerFoodScore() {
 
 let sleepTimer = setInterval(lowerSleepScore, 5000)
 function lowerSleepScore() {
-    scores.sleep -=7;
+    scores.sleep -=5;
     render();
     if(scores.sleep === 50) {
         alert('Your pet is TIRED!');
@@ -73,7 +74,7 @@ function lowerSleepScore() {
 
 let playTimer = setInterval(lowerPlayScore, 3000)
 function lowerPlayScore() {
-    scores.play -=3;
+    scores.play -=10;
     render();
     if(scores.play === 50) {
         alert('Your pet is BORED!');
@@ -83,3 +84,13 @@ function lowerPlayScore() {
         clearInterval(playTimer);
     }
 }
+
+// Pause and Play Button
+const pauseButtonEl = document.querySelector('#pause')
+
+pauseButtonEl.addEventListener('click', e => {
+    clearInterval(foodTimer);
+    clearInterval(sleepTimer);
+    clearInterval(playTimer);
+    render();
+});

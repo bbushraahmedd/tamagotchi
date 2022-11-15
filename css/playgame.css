@@ -103,3 +103,37 @@ span {
     color: #675A4F;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+#start {
+    width: 75px;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #C9E8F0;
+    position: absolute;
+    top: 5%;
+    left: 87%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(5%, 5%);
+    transition: 0.25px;
+    cursor: pointer;
+    color: #675A4F;
+}
+
+#pause {
+    width: 75px;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #C9E8F0;
+    position: absolute;
+    top: 5%;
+    left: 93%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(5%, 5%);
+    transition: 0.25px;
+    cursor: pointer;
+    color: #675A4F;
+}
