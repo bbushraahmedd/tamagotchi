@@ -45,7 +45,6 @@ function render() {
 }
 
 // Intervals Decreasing
-
 let foodTimer = setInterval(lowerFoodScore, 1000)
 function lowerFoodScore() {
     scores.food -=1;
@@ -57,7 +56,7 @@ function lowerFoodScore() {
 
 let sleepTimer = setInterval(lowerSleepScore, 5000)
 function lowerSleepScore() {
-    scores.sleep -=10;
+    scores.sleep -=7;
     render();
     if(scores.sleep === 0) {
         clearInterval(sleepTimer);
