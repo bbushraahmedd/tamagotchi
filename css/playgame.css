@@ -32,6 +32,7 @@ body {
     text-align: center;
     border-radius: 25px;
     font-weight: bold;
+    color: #675A4F;
     border: 2px solid #C9E8F0;
     margin: 0;
     position: absolute;
@@ -39,10 +40,15 @@ body {
     left: 15%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(5%, 5%);
-    transition: 0.25px;
-    cursor: pointer;
-    color: #675A4F;
+    box-shadow: inset 200px 0 0 0 #E8F5F9;
+    transition: ease-out 0.3s;
 }
+#food:hover{
+    box-shadow: inset 200px 0 0 0 #C9E8F0;
+    cursor: pointer;
+    color: #675a4f; 
+}
+
 
 #sleep {
     width: 200px;
@@ -57,9 +63,14 @@ body {
     left: 43%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(5%, 5%);
-    transition: 0.25px;
-    cursor: pointer;
+    box-shadow: inset 200px 0 0 0 #E8F5F9;
+    transition: ease-out 0.3s;
     color: #675A4F;
+}
+#sleep:hover{
+    box-shadow: inset 200px 0 0 0 #C9E8F0;
+    cursor: pointer;
+    color: #675a4f; 
 }
 
 #play {
@@ -75,12 +86,26 @@ body {
     left: 75%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(5%, 5%);
-    transition: 0.25px;
-    cursor: pointer;
+    box-shadow: inset 200px 0 0 0 #E8F5F9;
+    transition: ease-out 0.3s;
     color: #675A4F;
 }
+#play:hover{
+    box-shadow: inset 200px 0 0 0 #C9E8F0;
+    cursor: pointer;
+    color: #675a4f; 
+}
 
- h1 {
+.logo h2 {
+        font-size: 20px;
+        margin: 0.35em 3em;
+        position: absolute;
+        justify-content: center;
+        color: #675A4F;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+ #blurb h1 {
     align-items: center;
     width: 70%;
     font-size: 45px;
@@ -140,7 +165,7 @@ span {
 
 #resume {
     width: 75px;
-    padding: 15px 0;
+    padding: 12px 0;
     text-align: center;
     border-radius: 25px;
     font-weight: bold;
@@ -150,14 +175,35 @@ span {
     left: 87%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(5%, 5%);
-    transition: 0.25px;
+    color: #B9A492;
+    transition: ease-out 0.3s;
+    z-index: 1;
+}
+#resume:hover {
+    color:#675A4F;
+    box-shadow: inset 75px 0 0 0 #C9E8F0;
     cursor: pointer;
-    color: #675A4F;
+}
+#resume:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+}
+#resume:hover:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    z-index: -1;
 }
 
 #pause {
     width: 75px;
-    padding: 15px 0;
+    padding: 12px 0;
     text-align: center;
     border-radius: 25px;
     font-weight: bold;
@@ -169,9 +215,29 @@ span {
     transform: translate(5%, 5%);
     transition: 0.25px;
     cursor: pointer;
-    color: #675A4F;
+    color: #B9A492;
 }
-
+#pause:hover {
+    color:#675A4F;
+    box-shadow: inset 75px 0 0 0 #C9E8F0;
+    cursor: pointer;
+}
+#pause:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+}
+#pause:hover:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
 
 /* img links */
 /* <img class="pusheen-eat" src="https://i.ibb.co/8YBWy0M/pusheen-eat-html.png" alt="pusheen-eat-html" border="0"></a><br />

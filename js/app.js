@@ -99,7 +99,7 @@ pauseButtonEl.addEventListener('click', e => {
 function startTimers() {
     foodTimer = setInterval(lowerFoodScore, 1000)
     sleepTimer = setInterval(lowerSleepScore, 5000)
-    playTimer = setInterval(lowerPlayScore, 3000)
+    playTimer = setInterval(lowerPlayScore, 5000)
 }
 
 startTimers();
@@ -108,3 +108,5 @@ resumeButtonEl.addEventListener('click', e => {
     startTimers();
     render();
 });
+
+
