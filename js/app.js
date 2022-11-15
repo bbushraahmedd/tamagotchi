@@ -45,17 +45,30 @@ function render() {
 }
 
 // Intervals Decreasing
-setInterval(function lowerFoodScore() {
+
+let foodTimer = setInterval(lowerFoodScore, 1000)
+function lowerFoodScore() {
     scores.food -=1;
     render();
-}, 2000)
+    if(scores.food === 0) {
+        clearInterval(foodTimer);
+    }
+}
 
-setInterval(function lowerSleepScore() {
-    scores.sleep -=1;
+let sleepTimer = setInterval(lowerSleepScore, 5000)
+function lowerSleepScore() {
+    scores.sleep -=10;
     render();
-}, 5000)
+    if(scores.sleep === 0) {
+        clearInterval(sleepTimer);
+    }
+}
 
-setInterval(function lowerPlayScore() {
-    scores.play -=1;
+let playTimer = setInterval(lowerPlayScore, 3000)
+function lowerplayScore() {
+    scores.play -=3;
     render();
-}, 3000)
+    if(scores.play === 0) {
+        clearInterval(playTimer);
+    }
+}
