@@ -17,6 +17,7 @@
         <div id="blurb">
             <h1>Keep your pet alive by feeding it, playing with it, and letting it sleep!</h1>
         </div>
+    <div class="levels">
         <div class="food-level">
             <span id="foodScore">Food Level: 100</span>
         </div>
@@ -26,6 +27,7 @@
         <div class="play-level">
             <span id="playScore">Play Level: 100</span>
         </div>
+    </div>
         <div class="game-buttons">
             <button id="food" type="button">Feed</button>
             <button id="sleep" type="button">Sleep</button>
@@ -35,6 +37,31 @@
             <button id="resume" type="button">Resume</button>
             <button id="pause" type="button">Pause</button>
         </div>
+        <div id="display-image">
+            <img class="pusheen-heart" src="https://i.ibb.co/PxhZGVf/pusheen-heart-html.png" alt="pusheen-heart-html" border="0"> 
+            <img class="diff">
+        </div>
+        <div id="food-rectangle"></div>
+        <div id="sleep-rectangle"></div>
+        <div id="sleep-rectangle"></div>
+
+        <div class="backdrop"></div>
+        <div class="name">
+            <h1>Enter Pet Name</h1>
+            <div class="name-input">
+                <textarea rows="3"></textarea>
+            </div>
+            <div class="name-actions">
+                <button id="namebtn" type="button" class="btn-cancel">Cancel</button>
+                <button id="namebtn" type="button" class="btn-confirm">Confirm</button>
+            </div>
+        </div>
+
+        <div class="name-modal">
+            <div class="name-control">
+                <p id="new-name"></p>
+                <button id="namebtn" type="button">Edit Name</button>
+            </div>
         </div>
     </div>
 </body>

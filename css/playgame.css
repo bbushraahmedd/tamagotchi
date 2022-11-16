@@ -8,22 +8,87 @@ html {
 }
 
 body {
-    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
     min-height: 100vh;
     background-color: #FAEBD0;
     overflow: hidden;
     padding: 3em;
-    display: grid;
-    grid-gap: 2em;
     min-width: fit-content;
     position: relative;
     z-index: 1;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
 }
 
 .logo-pusheen {
     height: 30px;
     width: 50px;
     position: relative;
+    top: 5%;
+}
+.logo h2 {
+    font-size: 20px;
+    margin: 0.35em 3em;
+    position: absolute;
+    justify-content: center;
+    color: #675A4F;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#blurb h1 {
+    align-items: center;
+    width: 58%;
+    font-size: 45px;
+    text-align: left;
+    margin: 1em;
+    padding-top: 0.5em;
+    float: left;
+    color: #675A4F;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.food-level {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 55px;
+    margin: 1em 12em 1em 18em;
+}
+
+.sleep-level {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 55px;
+}
+
+.play-level {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 55px;
+}
+
+span {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 55px;
+    width: 45%;
+    font-size: 35px;
+    text-align: right;
+    margin: 1em 6em 1em 18em;
+    color: #675A4F;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 #food {
@@ -96,39 +161,8 @@ body {
     color: #675a4f; 
 }
 
-.logo h2 {
-        font-size: 20px;
-        margin: 0.35em 3em;
-        position: absolute;
-        justify-content: center;
-        color: #675A4F;
-        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
- #blurb h1 {
-    align-items: center;
-    width: 70%;
-    font-size: 45px;
-    text-align: left;
-    margin: 1em;
-    padding-top: 0.5em;
-    float: left;
-    color: #675A4F;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
 .food-level {
     margin: 0
-}
-span {
-    align-items: center;
-    display: inline-block;
-    width: 45%;
-    font-size: 35px;
-    text-align: right;
-    margin: 1em 6em 1em 18em;
-    color: #675A4F;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 #food-score {
@@ -213,7 +247,7 @@ span {
     left: 93%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(5%, 5%);
-    transition: 0.25px;
+    transition: ease-out 0.3s;
     cursor: pointer;
     color: #B9A492;
 }
@@ -239,12 +273,181 @@ span {
     z-index: -1;
 }
 
+#display-image {
+    width: 20px;
+}
+.pusheen-heart {
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    top: 40%;
+    left: 20%;
+}
+
+.name-modal {
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+   }
+   
+.name-control {
+    padding: 1rem;
+    border: 1px solid #521751;
+    text-align: center;
+}
+   
+button {
+    font: inherit;
+    background: transparent;
+    border: 2px solid #521751;
+    padding: 0.5rem 1rem;
+    color: #521751;
+    cursor: pointer;
+    font-weight: bold;
+}
+   
+button:hover,
+button:active {
+    border-color: #fa923f;
+    color: #fa923f;
+}  
+   
+   /*  The Modal */
+   
+.name {
+    display: none;
+    position: fixed;
+    z-index: 200;
+    top: 40%;
+    left: 40%;
+    width: 20%;
+    background: white;
+    -webkit-box-shadow: 1px 1px 6px rgba(0,0,0, .4);
+    box-shadow: 1px 1px 6px rgba(0,0,0, .4);
+    padding: 1rem;
+}
+   
+.name h1 { 
+    color: 521751;
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+}
+   
+.name-input {
+    margin: 0.5rem 0;
+}
+   
+.name-input textarea {
+    width: 100%;
+    font: inherit;
+    resize: none;
+}
+   
+.name-input textarea:focus{
+    outline: none;
+    background: #E8F5F9;
+    border-color: #521751
+}
+     
+button.btn-cancel:hover,
+button.btn-cancel:active {
+    color: #675A4F;
+    background: #fad0cb;
+}
+   
+button.btn-confirm{
+    border-color: #ddf1d4;
+    color: #ddf1d4;
+ }
+   
+   
+.name-actions{
+    text-align: right;
+   }
+   
+button.btn-cancel{
+    border-color: #fad0cb;
+    color: #fad0cb;
+   }
+   
+button.btn-confirm:hover,
+   button.btn-confirm:active{
+    color: #675A4F;
+    background: #ddf1d4;
+   }
+   
+   
+button.btn-comfirm:active {
+    color: #675A4F;
+    background: #ddf1d4;
+   }
+   
+.backdrop {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0, .5);
+    z-index: 100;
+   }
+   
+.open {
+    display: block;
+}
+   
+   
+
+/* #food-rectangle {
+    height: 35px;
+    width: 400px;
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 55px;
+    float: right;
+    position: absolute;
+    background-color: #ffffff;
+}
+
+#sleep-rectangle {
+    height: 35px;
+    width: 400px;
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    background-color: #ffffff;
+}
+
+#sleep-rectangle {
+    height: 35px;
+    width: 400px;
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    background-color: #ffffff;
+} */
+
 /* img links */
-/* <img class="pusheen-eat" src="https://i.ibb.co/8YBWy0M/pusheen-eat-html.png" alt="pusheen-eat-html" border="0"></a><br />
-<img class="pusheen-exercise" src="https://i.ibb.co/d2y7vSq/pusheen-exercise-html.png" alt="pusheen-exercise-html" border="0"></a>
-<img class="pusheen-love" src="https://i.ibb.co/47H8bBM/pusheen-love-html.png" alt="pusheen-love-html" border="0"></a>
-<img class="pusheen-play" src="https://i.ibb.co/98vp6ns/pusheen-play-html.png" alt="pusheen-play-html" border="0"></a>            
-<img class="pusheen-sleep" src="https://i.ibb.co/KNSsgpT/pusheen-sleep-html.png" alt="pusheen-sleep-html" border="0"></a>
-<img class="pusheen-sunglasses" src="https://i.ibb.co/D8wx7dq/pusheen-sunglasses-html.png" alt="pusheen-sunglasses-html" border="0"></a>
-<img class="pusheen-ramen" src="https://i.ibb.co/K0Vb53Z/pusheen-ramen-html.png" alt="pusheen-ramen-html" border="0"></a>
-<img class="pusheen-heart" src="https://i.ibb.co/PxhZGVf/pusheen-heart-html.png" alt="pusheen-heart-html" border="0"></a> */
+/* <img class="pusheen-eat" src="https://i.ibb.co/8YBWy0M/pusheen-eat-html.png" alt="pusheen-eat-html" border="0">
+<img class="pusheen-exercise" src="https://i.ibb.co/d2y7vSq/pusheen-exercise-html.png" alt="pusheen-exercise-html" border="0">
+<img class="pusheen-love" src="https://i.ibb.co/47H8bBM/pusheen-love-html.png" alt="pusheen-love-html" border="0">
+<img class="pusheen-play" src="https://i.ibb.co/98vp6ns/pusheen-play-html.png" alt="pusheen-play-html" border="0">            
+<img class="pusheen-sleep" src="https://i.ibb.co/KNSsgpT/pusheen-sleep-html.png" alt="pusheen-sleep-html" border="0">
+<img class="pusheen-sunglasses" src="https://i.ibb.co/D8wx7dq/pusheen-sunglasses-html.png" alt="pusheen-sunglasses-html" border="0">
+<img class="pusheen-ramen" src="https://i.ibb.co/K0Vb53Z/pusheen-ramen-html.png" alt="pusheen-ramen-html" border="0">
+<img class="pusheen-heart" src="https://i.ibb.co/PxhZGVf/pusheen-heart-html.png" alt="pusheen-heart-html" border="0"> 
+<img class="pusheen-sad" src="https://i.ibb.co/r4DTGff/sad-pusheen.png" alt="sad-pusheen" border="0">

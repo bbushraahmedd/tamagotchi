@@ -9,6 +9,40 @@ let foodScoreEl = document.querySelector('#foodScore')
 let sleepScoreEl = document.querySelector('#sleepScore')
 let playScoreEl = document.querySelector('#playScore')
 
+// Image Popup
+// const pusheenImages = {
+//     eat: {
+//         imageURL: 'https://i.ibb.co/8YBWy0M/pusheen-eat-html.png'
+//      },
+//      exercise: { 
+//         imageURL: 'https://i.ibb.co/d2y7vSq/pusheen-exercise-html.png'
+//      },
+//      sleep: { 
+//         imageURL: 'https://i.ibb.co/KNSsgpT/pusheen-sleep-html.png'
+//     },
+//     ramen: {
+//         imageURL: 'https://i.ibb.co/K0Vb53Z/pusheen-ramen-html.png'
+//     },
+//     plays: {
+//         imageURL: 'https://i.ibb.co/98vp6ns/pusheen-play-html.png'
+//     },
+// }
+
+
+// pusheenImages.eat.displayImageEl.src = pusheenImages[eat].imageURL;
+
+function showImages() {
+    if(scores.play === 50) {
+        
+    } else if(scores.play === 10) {
+        
+    } else if(scores.play === 0) {
+        
+    }
+    render();
+}
+
+
 // Render and Init Functions
 let scores;
 init();
@@ -51,13 +85,14 @@ function lowerFoodScore() {
     scores.food -=1;
     render();
     if(scores.food === 50) {
-        alert('Your pet is HUNGRY!');
+         alert('Your pet is HUNGRY!');
     } else if(scores.food === 10) {
         alert('HURRY AND FEED YOUR PET LIKE NOOOWW!!!!');
     } else if(scores.food === 0) {
         clearInterval(foodTimer);
     }
 }
+
 
 let sleepTimer; 
 function lowerSleepScore() {
@@ -99,7 +134,7 @@ pauseButtonEl.addEventListener('click', e => {
 function startTimers() {
     foodTimer = setInterval(lowerFoodScore, 1000)
     sleepTimer = setInterval(lowerSleepScore, 5000)
-    playTimer = setInterval(lowerPlayScore, 5000)
+    playTimer = setInterval(lowerPlayScore, 7000)
 }
 
 startTimers();
@@ -109,4 +144,51 @@ resumeButtonEl.addEventListener('click', e => {
     render();
 });
 
+// Name Modal
+const nameButtons = document.querySelectorAll('#namebtn');
+const nameModal = document.querySelector('.name');
+const backdrop = document.querySelector('.backdrop');
 
+const nameParagraph = document.querySelector('#new-name');
+let nameEdit = document.querySelector('.name-input textarea');
+
+let enterName = 'Enter your pets name';
+let editedName = '';
+
+function updateName() {
+    nameParagraph.textContent = enterName;
+    render();
+}
+
+function closeName () {
+    nameModal.style.display = 'none';
+    backdrop.style.display = 'none';
+    render();
+}
+
+updateName();
+
+nameButtons[2].addEventListener('click', e => {
+    nameModal.style.display = 'block';
+    backdrop.style.display = 'block';
+    editedName = enterName;
+    textEdit.value = enterName;
+    render();
+});
+
+nameButtons[0].addEventListener('click', closeName); 
+backdrop.addEventListener('click', closeName);
+
+nameButtons[1].addEventListener('click', e => {
+    closeName();
+    if (editedName.trim().length > 0) {
+        enterName = editedName;
+        updateName();
+    }
+    render();
+});
+
+nameEdit.addEventListener('input', e => {
+    editedName = textEdit.value;
+    render();
+});
