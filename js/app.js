@@ -172,7 +172,7 @@ nameButtons[2].addEventListener('click', e => {
     nameModal.style.display = 'block';
     backdrop.style.display = 'block';
     editedName = enterName;
-    textEdit.value = enterName;
+    nameEdit.value = enterName;
     render();
 });
 
@@ -189,6 +189,6 @@ nameButtons[1].addEventListener('click', e => {
 });
 
 nameEdit.addEventListener('input', e => {
-    editedName = textEdit.value;
+    editedName = nameEdit.value;
     render();
 });

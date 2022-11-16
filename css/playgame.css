@@ -212,6 +212,7 @@ span {
     color: #B9A492;
     transition: ease-out 0.3s;
     z-index: 1;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 #resume:hover {
     color:#675A4F;
@@ -250,6 +251,7 @@ span {
     transition: ease-out 0.3s;
     cursor: pointer;
     color: #B9A492;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 #pause:hover {
     color:#675A4F;
@@ -284,6 +286,7 @@ span {
     left: 20%;
 }
 
+
 .name-modal {
     height: 100%;
     display: -webkit-box;
@@ -298,12 +301,14 @@ span {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
    }
    
 .name-control {
     padding: 1rem;
     border: 1px solid #521751;
     text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
    
 button {
@@ -314,12 +319,15 @@ button {
     color: #521751;
     cursor: pointer;
     font-weight: bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 }
    
 button:hover,
 button:active {
-    border-color: #fa923f;
-    color: #fa923f;
+    border-color: #C9E8F0;
+    color: #E8F5F9;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }  
    
    /*  The Modal */
@@ -331,76 +339,92 @@ button:active {
     top: 40%;
     left: 40%;
     width: 20%;
-    background: white;
+    background: #FAEBD0;
     -webkit-box-shadow: 1px 1px 6px rgba(0,0,0, .4);
     box-shadow: 1px 1px 6px rgba(0,0,0, .4);
     padding: 1rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
    
 .name h1 { 
     color: 521751;
+    text-align: center;
     margin: 0.5rem 0;
     font-size: 1.2rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
    
 .name-input {
     margin: 0.5rem 0;
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
    
 .name-input textarea {
     width: 100%;
     font: inherit;
+    text-align: center;
     resize: none;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 }
    
 .name-input textarea:focus{
     outline: none;
     background: #E8F5F9;
-    border-color: #521751
+    border-color: #521751;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
      
 button.btn-cancel:hover,
 button.btn-cancel:active {
     color: #675A4F;
     background: #fad0cb;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
    
 button.btn-confirm{
     border-color: #ddf1d4;
-    color: #ddf1d4;
+    color: #675A4F;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
  }
    
    
 .name-actions{
-    text-align: right;
+    text-align: center;
    }
    
 button.btn-cancel{
     border-color: #fad0cb;
-    color: #fad0cb;
+    color: #675A4F;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
    }
    
 button.btn-confirm:hover,
    button.btn-confirm:active{
     color: #675A4F;
     background: #ddf1d4;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
    }
    
    
 button.btn-comfirm:active {
     color: #675A4F;
     background: #ddf1d4;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
    }
    
 .backdrop {
     display: none;
     position: fixed;
+    text-align: center;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
     background: rgba(0,0,0, .5);
     z-index: 100;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
    }
    
 .open {
