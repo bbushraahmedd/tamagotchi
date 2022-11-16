@@ -289,6 +289,7 @@ span {
 
 .name-modal {
     height: 100%;
+    top: 25%;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -306,18 +307,20 @@ span {
    
 .name-control {
     padding: 1rem;
-    border: 1px solid #521751;
+    top: 25%;
     text-align: center;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
    
 button {
     font: inherit;
+    border-radius: 12px;
     background: transparent;
     border: 2px solid #521751;
     padding: 0.5rem 1rem;
     color: #521751;
     cursor: pointer;
+    top: 25%;
     font-weight: bold;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 

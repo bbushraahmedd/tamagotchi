@@ -152,7 +152,7 @@ const backdrop = document.querySelector('.backdrop');
 const nameParagraph = document.querySelector('#new-name');
 let nameEdit = document.querySelector('.name-input textarea');
 
-let enterName = 'Enter your pets name';
+let enterName = '';
 let editedName = '';
 
 function updateName() {
