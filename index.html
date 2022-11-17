@@ -28,7 +28,7 @@
              <div class="name-modal">
                 <div class="name-control">
                     <p id="new-name"></p>
-                    <button id="namebtn" type="button">Enter Pet Name</button>
+                    <button class="btn-enter"id="namebtn" type="button">Enter Pet Name</button>
                 </div>
             </div>
         <div id="blurb">
@@ -58,18 +58,25 @@
             <img class="pusheen-heart" src="https://i.ibb.co/PxhZGVf/pusheen-heart-html.png" alt="pusheen-heart-html" border="0">
         </div>
         <!-- End Game Modal -->
-        <!-- <button class="end-btn">End Game</button>
-            <div class="end-modal"></div>
-                <div class="end-header">
-                    <div class="title">Game Over</div>
+        <section>
+         <button class="end-btn">End Game</button> 
+         <span class="overlay"></span>
+
+            <div class="end-modal-box">
+                <h2>Game Over</h2>
+                <p class="endGameSubtitle">You game has ended. Hit refresh to start over.</p>
+                <img class="pusheen-sad" src="https://i.ibb.co/r4DTGff/sad-pusheen.png" alt="sad-pusheen" border="0">
+
+                <div class="end-box-btn">
                     <button class="close-btn">&times;</button>
                 </div>
-                <div class="end-body">
-                    <p class="endGameSubtitle">You game has ended. Hit refresh to start over.</p>
-                    <img class="pusheen-sad" src="https://i.ibb.co/r4DTGff/sad-pusheen.png" alt="sad-pusheen" border="0">
+            </div>
+                <!-- <div class="end-header">
+                    <button class="close-btn">&times;</button>
                 </div>
-             </div>
-             <div id="overlay"></div> -->
+                <div class="end-body"></div> -->
+                  
+        </section>
     </div>
 </body>
 </html>

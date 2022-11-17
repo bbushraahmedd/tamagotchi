@@ -312,24 +312,26 @@ span {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
    
-button {
+button.btn-enter {
     font: inherit;
-    border-radius: 12px;
+    border-radius: 25px;
+    position: absolute;
     background: transparent;
     border: 2px solid #521751;
     padding: 0.5rem 1rem;
     color: #521751;
     cursor: pointer;
-    top: 25%;
+    top: 5.5%;
+    left: 75%;
     font-weight: bold;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 }
    
-button:hover,
-button:active {
-    border-color: #C9E8F0;
-    color: #E8F5F9;
+button.btn-enter:hover,
+button.btn-enter:active {
+    border-color: #e0ceeb;
+    color: #521751;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }  
    
@@ -342,7 +344,7 @@ button:active {
     top: 40%;
     left: 40%;
     width: 20%;
-    background: #FAEBD0;
+    background: #e0ceeb;
     -webkit-box-shadow: 1px 1px 6px rgba(0,0,0, .4);
     box-shadow: 1px 1px 6px rgba(0,0,0, .4);
     padding: 1rem;
@@ -389,6 +391,14 @@ button.btn-cancel:active {
 button.btn-confirm{
     border-color: #ddf1d4;
     color: #675A4F;
+    font: inherit;
+    border-radius: 12px;
+    background: transparent;
+    border: 1px solid #521751;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    top: 25%;
+    font-weight: bold;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
  }
    
@@ -400,6 +410,16 @@ button.btn-confirm{
 button.btn-cancel{
     border-color: #fad0cb;
     color: #675A4F;
+    font: inherit;
+    border-radius: 12px;
+    background: transparent;
+    border: 1px solid #521751;
+    padding: 0.5rem 1rem;
+    color: #521751;
+    cursor: pointer;
+    top: 25%;
+    font-weight: bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
    }
    
@@ -434,19 +454,99 @@ button.btn-comfirm:active {
     display: block;
 }
 
-/* .end-modal {
-    position: fixed;
+button.end-btn {
+    font: inherit;
+    border-radius: 25px;
+    background: #e0ceeb;
+    border: 2px solid #521751;
+    padding: 0.5rem 1rem;
+    color: #521751;
+    cursor: pointer;
+    top: 5.5%;
+    left: 65%;
+    position: absolute;
+    font-weight: bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+   
+button.end-btn:hover,
+button.end-btn:active {
+    border-color: #e0ceeb;
+    color: #521751;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+} 
+
+.overlay {
+    position: absolute;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    background: rgba(0,0,0, .5);
+}
+
+.end-modal-box {
+    background-color: #d5ebce;
+    max-width: 380px;
+    width: 100%;
+    height: 50%;
+    border-radius: 25px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    transition: 200ms ease-in-out;
-    border: 1px solid #521751;
-    border-radius: 10px;
-    z-index: 10;
-    background-color: #e0ceeb;
-    width: 300px;
-    max-width: 75%;
+    transform: translate(-50%, -50%);
 }
+
+.end-modal-box h2 {
+    margin-top: 8px;
+    font-size: 50px;
+    font-weight: bold;
+    color: #675A4F;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.end-modal-box p {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 30px;
+    color: #675A4F;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+img.pusheen-sad {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 35%;
+}
+
+.end-modal-box .end-box-btn{
+    margin-top: 25px;
+}
+
+.end-modal-box .close-btn {
+    position: absolute;
+    align-items: center;
+    top: 2%;
+    left: 2%;
+    padding: 8px 12px;
+    border-radius: 50px;
+    font-weight: bold;
+    color: #675A4F;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/* #overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}  */
+
+/* 
 
 .end.active {
     transform: translate(-50%, -50%) scale(1);
@@ -478,21 +578,8 @@ button.btn-comfirm:active {
     padding: 10px 15px;
 }
 
-#overlay {
-    position: fixed;
-    opacity: 0;
-    transition: 200ms ease-in-out;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0,0,0, .5);
-}
 
-#overlay.active {
-    opacity: 1;
-    pointer-events: all;
-} */
+*/
 
 
 
