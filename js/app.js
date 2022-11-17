@@ -84,11 +84,7 @@ let foodTimer;
 function lowerFoodScore() {
     scores.food -=1;
     render();
-    if(scores.food === 50) {
-         alert('Your pet is HUNGRY!');
-    } else if(scores.food === 10) {
-        alert('HURRY AND FEED YOUR PET LIKE NOOOWW!!!!');
-    } else if(scores.food === 0) {
+    if(scores.food === 0) {
         clearInterval(foodTimer);
     }
 }
@@ -98,11 +94,7 @@ let sleepTimer;
 function lowerSleepScore() {
     scores.sleep -=5;
     render();
-    if(scores.sleep === 50) {
-        alert('Your pet is TIRED!');
-    } else if(scores.sleep === 10) {
-        alert('HELLLLOOO?? Your pet is EXHAUSTED. Let them SLEEP!');
-    } else if(scores.sleep === 0) {
+    if(scores.sleep === 0) {
         clearInterval(sleepTimer);
     }
 }
@@ -111,11 +103,7 @@ let playTimer;
 function lowerPlayScore() {
     scores.play -=10;
     render();
-    if(scores.play === 50) {
-        alert('Your pet is BORED!');
-    } else if(scores.play === 10) {
-        alert('Hey! Go and play with your pet. They are dying from BOREDOM!!!');
-    } else if(scores.play === 0) {
+    if(scores.play === 0) {
         clearInterval(playTimer);
     }
 }
@@ -132,9 +120,9 @@ pauseButtonEl.addEventListener('click', e => {
 });
 
 function startTimers() {
-    foodTimer = setInterval(lowerFoodScore, 1000)
-    sleepTimer = setInterval(lowerSleepScore, 5000)
-    playTimer = setInterval(lowerPlayScore, 7000)
+    foodTimer = setInterval(lowerFoodScore, 500)
+    sleepTimer = setInterval(lowerSleepScore, 3000)
+    playTimer = setInterval(lowerPlayScore, 5000)
 }
 
 startTimers();
@@ -192,3 +180,32 @@ nameEdit.addEventListener('input', e => {
     editedName = nameEdit.value;
     render();
 });
+
+// End Game Modal
+// const endButtonEl = document.querySelector('.end-btn')
+// const closeButtonEl = document.querySelector('.close-btn')
+// const overlayEl = document.getElementById('overlay')
+
+// endButtonEl.addEventListener('click', e => {
+//     const endModal = document.querySelector(button.end-btn)
+//     closeModal(endModal);
+//     render();
+// });
+
+// closeButtonEl.addEventListener('click', e => {
+//     const endModal = button.closest('.end-modal')
+//     endGameModal(endModal);
+//     render();
+// });
+
+// function endGameModal(endModal) {
+//     if (endModal == null) return
+//     endModal.classList.add('active')
+//     overlayEl.classList.add('active')
+// };
+
+// function closeModal(endModal) {
+//     if (endModal == null) return
+//     endModal.classList.remove('active')
+//     overlayEl.classList.remove('active')
+// };
