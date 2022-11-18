@@ -1,3 +1,11 @@
+window.onload = function() {
+    setTimeout(function(){
+        nameModal.style.display = 'block'
+        console.log('working');
+    }, 50)
+
+}
+
 
 // Cached Variables for Level Buttons
 const foodButtonEl = document.querySelector('#food')
@@ -132,7 +140,7 @@ const nameButtons = document.querySelectorAll('#namebtn');
 const nameModal = document.querySelector('.name');
 const backdrop = document.querySelector('.backdrop');
 
-const nameParagraph = document.querySelector('#new-name');
+const nameParagraph = document.querySelector('.new-name');
 let nameEdit = document.querySelector('.name-input textarea');
 
 let enterName = '';
@@ -207,4 +215,5 @@ closeBtn.addEventListener('click', e => {
 function activateEndGameModal() {
     section.classList.add('active')
  };
-//  this function is used to let the modal appear whenever its called on (depending on the condition,, in my case its when any of the scores hit 0)
+//  this function is used to let the modal appear whenever its called on (depending on the condition,, in my case its when any of the scores hit 0
+

@@ -308,6 +308,7 @@ span {
     padding: 1rem;
     top: 25%;
     text-align: center;
+    color: #503324;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
    
@@ -352,7 +353,7 @@ button.btn-enter:active {
 }
    
 .name h1 { 
-    color: 521751;
+    color: #521751;
     text-align: center;
     margin: 0.5rem 0;
     font-size: 1.2rem;
@@ -362,6 +363,7 @@ button.btn-enter:active {
 .name-input {
     margin: 0.5rem 0;
     border-radius: 25px;
+    font-size: 35px;
     text-align: center;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -440,21 +442,19 @@ button.btn-comfirm:active {
    }
    
 .backdrop {
-    display: none;
+    display: flex;
     position: fixed;
     text-align: center;
+    transition: 2000s ease-in-out;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
     background: rgba(0,0,0, .5);
-    z-index: 100;
+    z-index: 10;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
    }
-   
-.open {
-    display: block;
-}
+
 
 section.active .end-btn {
     display: none;
@@ -546,32 +546,6 @@ img.pusheen-sad {
     cursor: pointer;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
-
-
-
-/* button.end-btn {
-    border-radius: 25px;
-    background: transparent;
-    border: 2px solid #521751;
-    padding: 0.5rem 1rem;
-    color: #521751;
-    cursor: pointer;
-    top: 5.5%;
-    left: 65%;
-    position: absolute;
-    font-weight: bold;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
-}
-   
-button.end-btn:hover,
-button.end-btn:active {
-    border-color: #e0ceeb;
-    color: #521751;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}  */
-
 
 /* img links */
 /* <img class="pusheen-eat" src="https://i.ibb.co/8YBWy0M/pusheen-eat-html.png" alt="pusheen-eat-html" border="0">
