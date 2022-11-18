@@ -11,7 +11,7 @@
 <img width="1505" alt="Enter Pet Name" src="https://user-images.githubusercontent.com/116580659/202608330-31cce782-54ea-498e-85d0-7351741c7235.png">
 
 
-2. Click on the corresponding buttons to make sure your pet it getting what it needs.
+2. Click on the corresponding buttons to make sure your pet is getting what it needs.
 <img width="1508" alt="Play Game" src="https://user-images.githubusercontent.com/116580659/202608382-05fc6dd5-cc6b-4906-9a82-765918c521fe.png">
 
 
