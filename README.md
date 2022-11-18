@@ -18,7 +18,7 @@ If their needs reach 0 -- its GAME OVER.
 
 Refresh the page to play again!
 
-##### Link To Play
+#### Link To Play
 Click [HERE](https://bbushraahmedd.github.io/tamagotchi/) to play the game!
 
 ## Technologies Used
@@ -27,3 +27,5 @@ Click [HERE](https://bbushraahmedd.github.io/tamagotchi/) to play the game!
 * CSS
 
 ## Next Steps
+* Possibly adding audio
+* Creating more modals for different images depending on the score level of each need
