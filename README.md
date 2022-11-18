@@ -2,7 +2,7 @@
 #### SEI 1031 Cohort
 #### By Bushra Ahmed
 
-## Description
+## Get Started
 Based on the classic 90s Tamagotchi game. Keep your virtual pet alive. 
 
 Enter the name of your pet to get started.
@@ -21,11 +21,11 @@ Refresh the page to play again!
 #### Link To Play
 Click [HERE](https://bbushraahmedd.github.io/tamagotchi/) to play the game!
 
-## Technologies Used
+### Technologies Used
 * Javascript
 * HTML
 * CSS
 
-## Next Steps
+### Next Steps
 * Possibly adding audio
 * Creating more modals for different images depending on the score level of each need
