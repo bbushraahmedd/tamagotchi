@@ -2,9 +2,10 @@
 #### SEI 1031 Cohort
 #### By Bushra Ahmed
 
-## Get Started
+
 Based on the classic 90s Tamagotchi game. Keep your virtual pet alive. 
 
+### Get Started
 1. Enter the name of your pet to get started.
 <img width="1505" alt="Enter Pet Name" src="https://user-images.githubusercontent.com/116580659/202608330-31cce782-54ea-498e-85d0-7351741c7235.png">
 
