@@ -3,9 +3,8 @@
 #### By Bushra Ahmed
 
 
-Based on the classic 90s Tamagotchi game. 
 
-**Keep your virtual pet alive.**
+##Keep your virtual pet alive.
 
 ### Get Started
 1. Enter the name of your pet to get started.
