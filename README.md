@@ -15,10 +15,10 @@
 <img width="1508" alt="Play Game" src="https://user-images.githubusercontent.com/116580659/202608382-05fc6dd5-cc6b-4906-9a82-765918c521fe.png">
 
 
-3. If their needs reach 0 -- its GAME OVER.
+3. If their needs reach 0 -- its GAME OVER. Refresh the page to play again!
 <img width="1510" alt="End Game" src="https://user-images.githubusercontent.com/116580659/202608403-5febad59-4762-4259-9e37-ab009e70109a.png">
 
-Refresh the page to play again!
+
 
 #### Link To Play
 Click [HERE](https://bbushraahmedd.github.io/tamagotchi/) to play the game!
