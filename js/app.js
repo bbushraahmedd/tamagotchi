@@ -66,30 +66,18 @@ let foodTimer;
 function lowerFoodScore() {
     scores.food -=1;
     render();
-    // if(scores.food === 0) {
-    //     clearInterval(foodTimer);
-    //     checkEndGame();
-    // }
 }
 
 let sleepTimer; 
 function lowerSleepScore() {
     scores.sleep -=5;
     render();
-    // if(scores.sleep === 0) {
-    //     clearInterval(sleepTimer);
-    //     checkEndGame();
-    // }
 }
 
 let playTimer;
 function lowerPlayScore() {
     scores.play -=10;
     render();
-    // if(scores.play === 0) {
-    //     clearInterval(playTimer);
-    //     checkEndGame();
-    // }
 }
 
 function stopGame() {
