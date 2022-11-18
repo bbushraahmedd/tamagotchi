@@ -19,7 +19,7 @@ If their needs reach 0 -- its GAME OVER.
 Refresh the page to play again!
 
 ##### Link To Play
-Click HERE to play the game!
+Click [HERE](https://bbushraahmedd.github.io/tamagotchi/) to play the game!
 
 ## Technologies Used
 * Javascript
